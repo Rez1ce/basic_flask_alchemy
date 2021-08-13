@@ -1,8 +1,9 @@
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
+from cred import username, passwd, address, port, db_name
 
 app = Flask(__name__)
-app.config ['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.sqlite3'
+app.config ['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://'+username+':'+passwd+'@'+address+':'+port+'/'+db_name
 
 db = SQLAlchemy(app)
 class users(db.Model):

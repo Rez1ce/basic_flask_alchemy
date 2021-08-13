@@ -7,3 +7,4 @@ MarkupSafe==2.0.1
 Werkzeug==2.0.1
 flask-sqlalchemy
 virtualenv
+psycopg2
