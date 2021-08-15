@@ -51,7 +51,7 @@ def index():
         dateBorn = request.form.get('dateBorn')
         education = request.form.get('education')
         comment = request.form.get('comment')
-        education = education.encode('cp1252')
+
         dateBorn = datetime.datetime.strptime(dateBorn, '%Y-%m-%d').date()
 
         new_user = users(name=username, middle_name=surname, gender=gender, bornDate=dateBorn)
